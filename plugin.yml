@@ -1,0 +1,33 @@
+name: TrintonCore
+main: me.killazombiecow.trintoncore.Core
+version: 10.6
+description: TrintonCore
+author: killazombiecow
+
+commands:
+   tc:
+      description: Main Command
+   help:
+      description: Main Command
+permissions:
+  tc.gclear:
+    description: Permission to clear the chat
+    default: op
+  tc.ocommands:
+    description: Permission to view owner commands
+    default: op
+  tc.acommands:
+    description: Permission to view administrator commands
+    default: op
+  tc.mcommands:
+    description: Permission to view moderator commands
+    default: op
+  tc.hcommands:
+    description: Permission to view helper commands
+    default: op
+  tc.gcommands:
+    description: Permission to view guide commands
+    default: op
+  tc.reload:
+    description: Permission to reload TCcore
+    default: op
