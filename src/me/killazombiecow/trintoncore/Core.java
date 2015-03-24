@@ -25,8 +25,8 @@ public class Core extends JavaPlugin implements Listener {
 		Bukkit.getServer().getPluginManager().registerEvents(this, this);
 		cooldownTime = new HashMap < Player, Integer > ();
 		cooldownTask = new HashMap < Player, BukkitRunnable > ();
-	    getConfig().options().copyDefaults(true);
-	    saveConfig();
+		getConfig().options().copyDefaults(true);
+		saveConfig();
 	}
 	
 	public boolean onCommand(final CommandSender sender, Command command, String alias, String[] args) {
@@ -56,24 +56,18 @@ public class Core extends JavaPlugin implements Listener {
 					sender.sendMessage(" ");
 
 					sender.sendMessage(ChatColor.GRAY + "" + ChatColor.BOLD + "Commands you have access to:");
-					if (sender.hasPermission("tc.ocommands")) {
+					if (sender.hasPermission("tc.ocommands"))
 						sender.sendMessage(ChatColor.RED + "/tc commands owner" + ChatColor.GRAY + " List of Owner Commands");
-					}
-					if (sender.hasPermission("tc.acommands")) {
+					if (sender.hasPermission("tc.acommands"))
 						sender.sendMessage(ChatColor.RED + "/tc commands admin" + ChatColor.GRAY + " List of Admin Commands");
-					}
-					if (sender.hasPermission("tc.mcommands")) {
+					if (sender.hasPermission("tc.mcommands"))
 						sender.sendMessage(ChatColor.RED + "/tc commands mod" + ChatColor.GRAY + " List of Moderator Commands");
-					}
-					if (sender.hasPermission("tc.bcommands")) {
+					if (sender.hasPermission("tc.bcommands"))
 						sender.hasPermission(ChatColor.RED + "/tc commands builder" + ChatColor.GRAY + " List of Builder Commands");
-					}
-					if (sender.hasPermission("tc.hcommands")) {
+					if (sender.hasPermission("tc.hcommands"))
 						sender.sendMessage(ChatColor.RED + "/tc commands helper" + ChatColor.GRAY + " List of Helper Commands");
-					}
-					if (sender.hasPermission("tc.gcommands")) {
+					if (sender.hasPermission("tc.gcommands"))
 						sender.sendMessage(ChatColor.RED + "/tc commands guide" + ChatColor.GRAY + " List of Guide Commands");
-					}
 					sender.sendMessage(ChatColor.RED + "/tc commands vip+" + ChatColor.GRAY + " List of VIP+ Commands");
 
 					sender.sendMessage(ChatColor.RED + "/tc commands vip" + ChatColor.GRAY + " List of VIP Commands");
